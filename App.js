@@ -20,9 +20,9 @@ export default class App extends React.Component {
     debugger;
     if (this.state.jokes && this.state.jokes.length > 0) {
       return (
-        <View style={{ flex: 1, alignItems: 'flex-start' }}>
+        <View style={styles.jokesContainer}>
         <CardSwiper
-          jokes={this.state.jokes}          
+          jokes={this.state.jokes}
         />
         </View>
       );
@@ -56,13 +56,20 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 4,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'flex-start'
   },
   landingTextContainer: {
-    flex: 1,
+    flex: 3,
     alignItems: 'flex-start',
+
+  },
+  jokesContainer: {
+    flex: 3,
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    
   }
 });

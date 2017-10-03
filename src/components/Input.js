@@ -35,12 +35,12 @@ class Input extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: 'white',
+    flex: 1,    
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignSelf: 'stretch',
-    padding: 20
+    padding: 20,
+    marginTop: 80
   },
   input: {
     height: 40,
