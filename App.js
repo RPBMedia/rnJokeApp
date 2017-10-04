@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Keyboard } from 'react-native';
 import Input from './src/components/Input';
 import CardSwiper from './src/components/CardSwiper';
 
@@ -42,7 +42,7 @@ export default class App extends React.Component {
       <View style={styles.container}>
 
         <Input
-          updateJokes={(jokes) => this.setState({ jokes })}
+          updateJokes={(jokes) => { Keyboard.dismiss(); this.setState({ jokes }); }}
           value={this.state.value}
           onChangeText={this.onChangeText}
         />
@@ -70,6 +70,6 @@ const styles = StyleSheet.create({
     flex: 3,
     alignItems: 'flex-start',
     justifyContent: 'center',
-    
+
   }
 });
